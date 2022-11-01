@@ -4,7 +4,8 @@ from utils.cookieUtil import checkCookie, mainPath, jobName
 
 # 模拟浏览器代理
 headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/82.0.4051.0 Safari/537.36 Edg/82.0.425.0'}
+    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36'
+}
 
 # 设置Chrome浏览器
 chrome_options = webdriver.ChromeOptions()

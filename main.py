@@ -12,7 +12,7 @@ from utils.depend import chrome
 '''
 
 # 抢购时间(格式化时间：2022, 9, 10, 17, 33, 10 )
-buyTime = datetime.datetime(2022, 9, 10, 21, 36, 30)
+buyTime = datetime.datetime(2022, 11, 1, 11, 13, 30)
 # 抢购执行次数
 cnt = 5
 # 初次使用需要扫码登录，此处设置为扫码登录的时间，单位秒
@@ -47,7 +47,7 @@ else:
 localTime = datetime.datetime.today()
 timeDifference = (buyTime - localTime).seconds
 while timeDifference > 0:
-    time.sleep(0.5)
+    time.sleep(0.01)
     localTime = datetime.datetime.today()
     timeDifference = (buyTime - localTime).seconds
     print('倒计时:' + str(timeDifference) + '秒')
