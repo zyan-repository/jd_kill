@@ -12,7 +12,7 @@ from utils.depend import chrome
 '''
 
 # 抢购时间(格式化时间：2022, 9, 10, 17, 33, 10 )
-buyTime = datetime.datetime(2022, 11, 1, 11, 13, 30)
+buyTime = datetime.datetime(2022, 11, 1, 12, 9, 5)
 # 抢购执行次数
 cnt = 5
 # 初次使用需要扫码登录，此处设置为扫码登录的时间，单位秒
@@ -52,7 +52,7 @@ while timeDifference > 0:
     timeDifference = (buyTime - localTime).seconds
     print('倒计时:' + str(timeDifference) + '秒')
     # 定时刷新网页，防止会话过期
-    if timeDifference % 150 == 0 and timeDifference >= 20:
+    if int(timeDifference) % 150 == 0 and timeDifference >= 20:
         chrome.refresh()
         time.sleep(2)
         saveCookie(jobName, chrome.get_cookies())
