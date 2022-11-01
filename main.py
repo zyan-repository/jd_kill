@@ -47,7 +47,7 @@ else:
 localTime = datetime.datetime.today()
 timeDifference = (buyTime - localTime).seconds
 while timeDifference > 0:
-    time.sleep(0.01)
+    time.sleep(0.1)
     localTime = datetime.datetime.today()
     timeDifference = (buyTime - localTime).seconds
     print('倒计时:' + str(timeDifference) + '秒')
